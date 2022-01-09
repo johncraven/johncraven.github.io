@@ -1,6 +1,6 @@
 baseURL = 'https://johncraven.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'John's Site'
 theme = 'anatole'
 
 [params]
