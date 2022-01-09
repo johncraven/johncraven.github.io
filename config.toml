@@ -26,6 +26,16 @@ icon = "fab fa-linkedin"
 title = "Linkedin"
 url = "https://www.linkedin.com/in/johndcraven/"
 
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "Github"
+url = "https://github.com/johncraven"
+
+[[params.socialIcons]]
+icon = "fab fa-goodreads"
+title = "Goodreads"
+url = "https://www.goodreads.com/user/show/51874054-john"
+
 [menu]
 
   [[menu.main]]
