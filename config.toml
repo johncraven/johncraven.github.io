@@ -2,13 +2,14 @@ baseURL = 'https://johncraven.github.io/'
 languageCode = 'en-us'
 title = "John's Site"
 theme = 'anatole'
+enableEmoji = true
 
 [params]
 title = "John Craven"
 author = "John Craven"
 description = "Senior Scientist @ GSK"
 profilePicture = "images/profile.jpg"
-contentratio = 0.75
+contentratio = 0.6
 doNotLoadAnimations = true # Animations are loaded by default
 
 [taxonomies]
