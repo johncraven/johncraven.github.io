@@ -1,0 +1,164 @@
+<!doctype html><html dir=ltr lang=en data-theme><head>
+<title>
+John Craven
+|
+First Steps in Django
+</title>
+<meta charset=utf-8><meta name=generator content="Hugo 0.91.2"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="
+      Senior Scientist @ GSK
+
+
+    ">
+<link rel=stylesheet href=/css/main.min.24f9f28bfaca2cdc5a222bb5e42d30c701d7ffb0b31d30dfc4afc0e044dfbf24.css integrity="sha256-JPnyi/rKLNxaIiu15C0wxwHX/7CzHTDfxK/A4ETfvyQ=" crossorigin=anonymous type=text/css>
+<link rel=stylesheet href=/css/markupHighlight.min.058b31f17db60602cc415fd63b0427e7932fbf35c70d8e341a4c39385f5f6f3e.css integrity="sha256-BYsx8X22BgLMQV/WOwQn55MvvzXHDY40Gkw5OF9fbz4=" crossorigin=anonymous type=text/css>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin=anonymous>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=canonical href=https://johncraven.github.io/posts/first-steps/>
+<script type=text/javascript src=/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w=" crossorigin=anonymous></script>
+<script type=text/javascript src=/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus=" crossorigin=anonymous></script>
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="First Steps in Django">
+<meta name=twitter:description content="Starting out I&rsquo;ve been interested in building more web development skills for a while now. I know some basic HTML/CSS, not as much JS. In particular I wanted to learn more about back end or full stack type web development, since I&rsquo;m more interested in how to translate business logic into tools than presentation or interaction in front-end focused web development.
+Django seemed like a good fit for me, it&rsquo;s a full-stack framework in the vein of Rails or Laravel and it&rsquo;s built in python.">
+<meta property="og:title" content="First Steps in Django">
+<meta property="og:description" content="Starting out I&rsquo;ve been interested in building more web development skills for a while now. I know some basic HTML/CSS, not as much JS. In particular I wanted to learn more about back end or full stack type web development, since I&rsquo;m more interested in how to translate business logic into tools than presentation or interaction in front-end focused web development.
+Django seemed like a good fit for me, it&rsquo;s a full-stack framework in the vein of Rails or Laravel and it&rsquo;s built in python.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://johncraven.github.io/posts/first-steps/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-01-11T13:14:46-05:00">
+<meta property="article:modified_time" content="2022-01-11T13:14:46-05:00"><meta property="og:site_name" content="John Craven">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"posts","name":"First Steps in Django","headline":"First Steps in Django","alternativeHeadline":"","description":"
+      
+        Starting out I\u0026rsquo;ve been interested in building more web development skills for a while now. I know some basic HTML\/CSS, not as much JS. In particular I wanted to learn more about back end or full stack type web development, since I\u0026rsquo;m more interested in how to translate business logic into tools than presentation or interaction in front-end focused web development.\nDjango seemed like a good fit for me, it\u0026rsquo;s a full-stack framework in the vein of Rails or Laravel and it\u0026rsquo;s built in python.
+
+
+      
+
+
+    ","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/johncraven.github.io\/posts\/first-steps\/"},"author":{"@type":"Person","name":"John Craven"},"creator":{"@type":"Person","name":"John Craven"},"accountablePerson":{"@type":"Person","name":"John Craven"},"copyrightHolder":{"@type":"Person","name":"John Craven"},"copyrightYear":"2022","dateCreated":"2022-01-11T13:14:46.00Z","datePublished":"2022-01-11T13:14:46.00Z","dateModified":"2022-01-11T13:14:46.00Z","publisher":{"@type":"Organization","name":"John Craven","url":"https://johncraven.github.io/","logo":{"@type":"ImageObject","url":"https:\/\/johncraven.github.io\/favicon-32x32.png","width":"32","height":"32"}},"image":[],"url":"https:\/\/johncraven.github.io\/posts\/first-steps\/","wordCount":"423","genre":[],"keywords":[]}</script>
+</head>
+<body>
+<header><div class="page-top
+.">
+<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+</a>
+<nav>
+<ul class=nav__list id=navMenu>
+<div class=nav__links>
+<li>
+<a href=/ title>Home</a>
+</li>
+<li>
+<a href=/posts/ title>Posts</a>
+</li>
+<li>
+<a href=/about/ title>About</a>
+</li>
+</div>
+<ul>
+<li>
+<a class=theme-switch title="Switch Theme">
+<i class="fas fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</ul>
+</nav>
+</div>
+</header>
+<div class=wrapper>
+<aside><div class="sidebar
+.">
+<div class=sidebar__content>
+<div class=logo-title>
+<div class=title>
+<img src=/images/profile.jpg alt="profile picture">
+<h3 title><a href=/>John Craven</a></h3>
+<div class=description>
+<p>Senior Scientist @ GSK</p>
+</div>
+</div>
+</div>
+<ul class=social-links>
+<li>
+<a href=mailto:johndcraven@gmail.com rel=me aria-label=e-mail title=e-mail>
+<i class="fas fa-envelope fa-2x" aria-hidden=true></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/johndcraven/ rel=me aria-label=Linkedin title=Linkedin>
+<i class="fab fa-linkedin fa-2x" aria-hidden=true></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/johncraven rel=me aria-label=Github title=Github>
+<i class="fab fa-github fa-2x" aria-hidden=true></i>
+</a>
+</li>
+<li>
+<a href=https://www.goodreads.com/user/show/51874054-john rel=me aria-label=Goodreads title=Goodreads>
+<i class="fab fa-goodreads fa-2x" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div><footer class="footer footer--sidebar">
+<div class=by_farbox>
+<ul class=footer__list>
+<li class=footer__item>
+&copy;
+John Craven
+2022
+</li>
+</ul>
+</div>
+</footer>
+<script type=text/javascript src=/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I=" crossorigin=anonymous></script></div>
+</aside>
+<main>
+<div class=autopagerize_page_element>
+<div class=content>
+<div class="post
+.">
+<div class=post-content>
+<div class=post-title>
+<h1>First Steps in Django</h1>
+</div><h3 id=starting-out>Starting out</h3>
+<p>I&rsquo;ve been interested in building more web development skills for a while now. I know some basic HTML/CSS, not as much JS. In particular I wanted to learn more about back end or full stack type web development, since I&rsquo;m more interested in how to translate business logic into tools than presentation or interaction in front-end focused web development.</p>
+<p><a href=https://www.djangoproject.com/>Django</a> seemed like a good fit for me, it&rsquo;s a full-stack framework in the vein of Rails or Laravel and it&rsquo;s built in python. Django has a &ldquo;batteries included&rdquo; philosophy and includes a lot of the tooling you need for a simple web app right off the bat; an ORM to define and interact with your database, url routing, different types of views, and a templating system for html or other files. I thought django was a good fit for me since I already knew some python, and I was hoping the &ldquo;batteries included&rdquo; style of framework would stave off some analysis-paralysis of trying to navigate a jungle of different tools.</p>
+<p>As an aside, I played a little bit with two other python based frameworks; <a href=https://flask.palletsprojects.com/en/2.0.x/>Flask</a> and <a href=https://fastapi.tiangolo.com/>FastAPI</a>. Flask is another mainstay in python web frameworks but it&rsquo;s designed to be very minimal, and you include tools as needed. After running through an excellent guide from <a href=https://courses.miguelgrinberg.com/>Miguel Grinberg</a> I was surprised how much parity there was between his example and Django, but with more flexibility. FastAPI is very cool, especially if you want to through a quick API over some python code you&rsquo;ve already written, but didn&rsquo;t fit the bill for the type of full stack development I was looking for.</p>
+<h3 id=training-wheels>Training wheels</h3>
+<p>OK, so I decided Django was the sweet spot, now what? I&rsquo;ll admit I fell into the trap of reading too much about it before building my own projects. I went through the tutorial on the <a href=https://docs.djangoproject.com/en/4.0/intro/tutorial01/>django website</a>, read through <a href=https://djangoforbeginners.com/>Django for Beginners</a>, and finally <a href=https://www.feldroy.com/books/a-wedge-of-django>Wedge of Django</a> even though each of those stress to get out and build stuff at the end. But the positive side of reading through those is that I got introduced to a lot of things I might not have found out on my own. Things like deploying on heroku, making factories for tests, seperating out environment variables for local dev and production didn&rsquo;t seem as daunting.</p>
+<p>I want to start practicing with some small projects before I tackle some of the bigger projects I have in mind. The classic first project is a To-Do app, which sounds like a good place to start.</p>
+<h3>Posts in this Series</h3>
+<ul>
+<li><a href=/posts/first-steps/>First Steps in Django</a></li>
+</ul>
+</div>
+<div class=post-footer>
+<div class=info>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div><footer class="footer footer--base">
+<div class=by_farbox>
+<ul class=footer__list>
+<li class=footer__item>
+&copy;
+John Craven
+2022
+</li>
+</ul>
+</div>
+</footer>
+<script type=text/javascript src=/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I=" crossorigin=anonymous></script></body>
+</html>
