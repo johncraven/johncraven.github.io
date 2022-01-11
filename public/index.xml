@@ -5,29 +5,17 @@
     <link>https://johncraven.github.io/</link>
     <description>Recent content on John&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 09 Jan 2022 15:51:49 -0500</lastBuildDate><atom:link href="https://johncraven.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://johncraven.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>https://johncraven.github.io/posts/my-first-post/</link>
-      <pubDate>Sun, 09 Jan 2022 15:51:49 -0500</pubDate>
-      
-      <guid>https://johncraven.github.io/posts/my-first-post/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>About</title>
+      <title></title>
       <link>https://johncraven.github.io/about/</link>
       <pubDate>Sun, 09 Jan 2022 15:43:03 -0500</pubDate>
       
       <guid>https://johncraven.github.io/about/</guid>
       
-        <description>About me I set up this site a a resume site / blog to showcase things I&amp;rsquo;m interested in, feel free to poke around. In the future I&amp;rsquo;m hoping to show some work with python; data wrangling and visualization, web dev with django, and more.
-Jobs &amp;hellip; list jobs
-Education &amp;hellip; list edu</description>
+        <description>Scientist with a coding skillset MS in Chemical Engineering. Interested in bioreactors, lab automation, and data. Moderate experience with SQL and Python. Some exerience with web dev (looking to develop more) and Azure.
+🧪 Work Senior Scientist @ GSK (2021 - present) Upstream biopharmaceutical process development, specializing in technical aspects of micro-scale mammalian bioreactors (15mL, 250mL), and data projects across our department.
+  Micro-scale bioreactor operation using Sartorius Ambr250HT 24-way bioreactor system: setup/teardown, programming, troubleshooting, training scientists.</description>
       
     </item>
     
