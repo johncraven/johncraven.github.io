@@ -16,3 +16,5 @@ As an aside, I played a little bit with two other python based frameworks; [Flas
 
 ### Training wheels
 OK, so I decided Django was the sweet spot, now what? I'll admit I fell into the trap of reading too much about it before building my own projects. I went through the tutorial on the [django website](https://docs.djangoproject.com/en/4.0/intro/tutorial01/), read through [Django for Beginners](https://djangoforbeginners.com/), and finally [Wedge of Django](https://www.feldroy.com/books/a-wedge-of-django) even though each of those stress to get out and build stuff at the end. But the positive side of reading through those is that I got introduced to a lot of things I might not have found out on my own. Things like deploying on heroku, making factories for tests, seperating out environment variables for local dev and production didn't seem as daunting.
+
+I want to start practicing with some small projects before I tackle some of the bigger projects I have in mind. The classic first project is a To-Do app, which sounds like a good place to start.
