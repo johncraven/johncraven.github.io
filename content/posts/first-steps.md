@@ -1,7 +1,7 @@
 ---
 title: "First Steps in Django"
 date: 2022-01-11T13:14:46-05:00
-draft: True
+draft: False
 series:
     - django-journey
 ---
