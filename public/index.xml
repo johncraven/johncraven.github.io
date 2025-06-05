@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Junk Drawer</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Junk Drawer</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 05 Jun 2025 17:29:59 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My current e-piano audio setup 🎹</title>
+      <link>http://localhost:1313/posts/audio-routing/</link>
+      <pubDate>Thu, 05 Jun 2025 17:29:59 -0400</pubDate>
+      <guid>http://localhost:1313/posts/audio-routing/</guid>
+      <description>&lt;h2 id=&#34;a-little-background&#34;&gt;A little background&amp;hellip;&lt;/h2&gt;
+&lt;p&gt;I bought a digital piano (Roland FP-30x) last year after wanting to get back into paino for a long time. I played a bit of piano when I was young and then played guitar on and off for a few years. I&amp;rsquo;m still playing at a beginner level but getting back into playing as a hobby has been fun. Most of the time I&amp;rsquo;m playing with sheet music or video lessons (I&amp;rsquo;ve been having a good time with &lt;a href=&#34;https://www.pianote.com/&#34;&gt;Pianote&lt;/a&gt;), but also wanted to dig into some more music production and playing with synths / VSTs.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
