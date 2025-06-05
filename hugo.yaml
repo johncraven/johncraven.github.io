@@ -52,7 +52,7 @@ params:
       url: "https://www.linkedin.com/in/johndcraven/"
 
   editpost:
-    URL: "https://github.com/johncraven/johncraven.github.io/content"
+    URL: "https://github.com/johncraven/johncraven.github.io/blob/main/content"
     Text: "Suggest changes"
     appendFilePath: true
 
