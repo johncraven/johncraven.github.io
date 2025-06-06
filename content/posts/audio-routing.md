@@ -3,6 +3,10 @@ date: '2025-06-05T17:29:59-04:00'
 draft: False
 title: 'My current e-piano audio setup 🎹'
 author: John Craven
+categories: 
+- music
+tags:
+- music production
 ---
 
 ## A little background...
