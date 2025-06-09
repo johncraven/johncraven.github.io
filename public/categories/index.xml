@@ -6,6 +6,21 @@
     <description>Recent content in Categories on Junk Drawer</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 09 Jun 2025 18:29:40 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tech</title>
+      <link>http://localhost:1313/categories/tech/</link>
+      <pubDate>Mon, 09 Jun 2025 18:29:40 -0400</pubDate>
+      <guid>http://localhost:1313/categories/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Music</title>
+      <link>http://localhost:1313/categories/music/</link>
+      <pubDate>Thu, 05 Jun 2025 17:29:59 -0400</pubDate>
+      <guid>http://localhost:1313/categories/music/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
