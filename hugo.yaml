@@ -63,4 +63,4 @@ params:
 
 services:
   disqus:
-    shortname: your-disqus-shortname
+    shortname: junk-drawer
