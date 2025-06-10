@@ -59,7 +59,7 @@ params:
   showBreadcrumbs: true
   showToc: true
   showCodeCopyButton: true
-  comments: true
+  comments: false
 
 services:
   disqus:
