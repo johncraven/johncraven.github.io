@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Simple Todo Site | Junk Drawer</title>
+<meta name="keywords" content="django, web">
+<meta name="description" content="I have been working in an IT management role for a few years now, primarily focused on data engineering and integrations with analytical instrumentation. Unfortunately, I rarely get the chance to develop hands-on coding skills at work, so I thought it would be fun to take up some side projects and tinker around. To get started I made a simple to-do website with Django. The site is basic CRUD functionality just to help jog my memory on how everything fits together.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/simple-todo-site/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/simple-todo-site/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Junk Drawer (Alt + H)">Junk Drawer</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="home">
+                    <span>home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="archives">
+                    <span>archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="search (Alt &#43; /)" accesskey=/>
+                    <span>search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Simple Todo Site
+    </h1>
+    <div class="post-meta"><span title='2025-06-17 19:53:37 -0400 EDT'>June 17, 2025</span>&nbsp;|&nbsp;<a href="https://github.com/johncraven/johncraven.github.io/blob/main/content/posts/simple-todo-site/index.md" rel="noopener noreferrer edit" target="_blank">Suggest changes</a>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p>I have been working in an IT management role for a few years now, primarily focused on data engineering and integrations with analytical instrumentation. Unfortunately, I rarely get the chance to develop hands-on coding skills at work, so I thought it would be fun to take up some side projects and tinker around. To get started I made a simple to-do website with Django. The site is basic CRUD functionality just to help jog my memory on how everything fits together.</p>
+<p>If you haven&rsquo;t head of <a href="https://www.djangoproject.com/">Django</a>, its a python web framework that is pitches as being &ldquo;batteries included&rdquo;. It the core things you might want in a backend framework built in - ORM, auth, routing, template rendering, and a good ecosystem of supporting packages. I thought it would be a good fit to start with Django because I had some previous exposure to the framework, I know a decent amount of python, and Django&rsquo;s feature set seems like a good fit to build out little demo sites and proof of concepts for work.</p>
+<p><img alt="image" loading="lazy" src="/posts/simple-todo-site/site_example.gif#center"></p>
+<p>The core of the site really comes down to requests being routed to configuring a &ldquo;model&rdquo; that defines the database tables and relationships for data in the app, &ldquo;views&rdquo; which take those models and business logic to render &ldquo;templates&rdquo;</p>
+<p>The models file here only has one class, which translates into one database table with a relation to a separate user model. Django comes set up using sqlite but also has support for postgres, mysql and a few other rdbms flavors.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># tasks/models.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> reverse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Task</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>    title <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    is_complete <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>BooleanField(default<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, null<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    author <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;users.CustomUser&#34;</span>, on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE, related_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tasks&#34;</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__str__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>title <span style="color:#66d9ef">if</span> len(self<span style="color:#f92672">.</span>title) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">31</span> <span style="color:#66d9ef">else</span> self<span style="color:#f92672">.</span>title[:<span style="color:#ae81ff">30</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;...&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_absolute_url</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> reverse(<span style="color:#e6db74">&#34;task_detail&#34;</span>, kwargs<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;pk&#34;</span>: self<span style="color:#f92672">.</span>pk})
+</span></span></code></pre></div><p>For the views here I kept them simple and used the generic class based views. I had a few issues finding the first fields on some of these but a mix of trial and error with the debug responses from the development server and <a href="https://ccbv.co.uk/">Classy Class Based Views</a> helped out. I ran into a few issues on setting up some custom logic in forms and needed to set up the debug options in vscode to make sure I was using the right methods.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># tasks/views.py </span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.views.generic <span style="color:#f92672">import</span> DetailView, DeleteView, UpdateView, CreateView
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> reverse_lazy
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib.auth.decorators <span style="color:#f92672">import</span> login_required
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Task
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .forms <span style="color:#f92672">import</span> TaskUpdateForm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@login_required</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">homepage_view</span>(request):
+</span></span><span style="display:flex;"><span>    tasks <span style="color:#f92672">=</span> Task<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(author<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>user)<span style="color:#f92672">.</span>order_by(<span style="color:#e6db74">&#34;is_complete&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(
+</span></span><span style="display:flex;"><span>        request,
+</span></span><span style="display:flex;"><span>        template_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;home.html&#34;</span>,
+</span></span><span style="display:flex;"><span>        context<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;tasks&#34;</span>: tasks,
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TaskCreate</span>(CreateView):
+</span></span><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> Task
+</span></span><span style="display:flex;"><span>    fields <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;title&#34;</span>]
+</span></span><span style="display:flex;"><span>    template_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;task_new.html&#34;</span>
+</span></span><span style="display:flex;"><span>    success_url <span style="color:#f92672">=</span> reverse_lazy(<span style="color:#e6db74">&#34;home&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">form_valid</span>(self, form):
+</span></span><span style="display:flex;"><span>        form<span style="color:#f92672">.</span>instance<span style="color:#f92672">.</span>author <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>user
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> super()<span style="color:#f92672">.</span>form_valid(form)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">....</span>
+</span></span></code></pre></div><p>Those views couple with some simple html templates to render out forms and links to different parts of the site. Here&rsquo;s an example template&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{% comment %} templates/task_new.html {% endcomment %}
+</span></span><span style="display:flex;"><span>{% extends &#34;base.html&#34; %}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{% block title %}New Task{% endblock title %}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{% block main %}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;Create task&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">form</span>  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;update-form&#34;</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    {% csrf_token %}
+</span></span><span style="display:flex;"><span>    {{form.title}}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;update-submit&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;Update&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>{% endblock main %}
+</span></span></code></pre></div><p>The most complicated part of this example was getting auth set up. I used the basic password authentication built in with django but followed a guide from William Vincent on <a href="https://learndjango.com/tutorials/django-custom-user-model">how to set up a custom user model and profile</a>. From there I just needed to wire up the right routing, views and templates to get the custom user model working properly.</p>
+<p>Overall it was a good chance to knock some of the rust off and start getting reacquainted with basic web development.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/django/">Django</a></li>
+      <li><a href="http://localhost:1313/tags/web/">Web</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Junk Drawer</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
