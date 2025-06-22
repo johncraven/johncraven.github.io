@@ -2,28 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-06-17T19:53:37-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/django/</loc>
+    <lastmod>2025-06-17T19:53:37-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/django-todo/</loc>
+    <lastmod>2025-06-17T19:53:37-04:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-06-17T19:53:37-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-06-17T19:53:37-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/simple-todo-site/</loc>
+    <loc>http://localhost:1313/posts/todo-1/</loc>
     <lastmod>2025-06-17T19:53:37-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-06-09T18:29:40-04:00</lastmod>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-06-17T19:53:37-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/tech/</loc>
+    <lastmod>2025-06-17T19:53:37-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web/</loc>
+    <lastmod>2025-06-17T19:53:37-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2025-06-09T18:29:40-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/linux-update/</loc>
-    <lastmod>2025-06-09T18:29:40-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-06-09T18:29:40-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/tech/</loc>
     <lastmod>2025-06-09T18:29:40-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/music/</loc>

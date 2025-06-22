@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/tags/django/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple Todo Site</title>
-      <link>http://localhost:1313/posts/simple-todo-site/</link>
+      <link>http://localhost:1313/posts/todo-1/</link>
       <pubDate>Tue, 17 Jun 2025 19:53:37 -0400</pubDate>
-      <guid>http://localhost:1313/posts/simple-todo-site/</guid>
+      <guid>http://localhost:1313/posts/todo-1/</guid>
       <description>&lt;p&gt;I have been working in an IT management role for a few years now, primarily focused on data engineering and integrations with analytical instrumentation. Unfortunately, I rarely get the chance to develop hands-on coding skills at work, so I thought it would be fun to take up some side projects and tinker around. To get started I made a simple to-do website with Django. The site is basic CRUD functionality just to help jog my memory on how everything fits together.&lt;/p&gt;</description>
     </item>
   </channel>
