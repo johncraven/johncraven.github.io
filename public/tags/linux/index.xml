@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on Junk Drawer</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>https://johncraven.github.io/tags/linux/</link>
     <description>Recent content in Linux on Junk Drawer</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Jun 2025 18:29:40 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://johncraven.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Update 🐧</title>
-      <link>http://localhost:1313/posts/linux-update/</link>
+      <link>https://johncraven.github.io/posts/linux-update/</link>
       <pubDate>Mon, 09 Jun 2025 18:29:40 -0400</pubDate>
-      <guid>http://localhost:1313/posts/linux-update/</guid>
+      <guid>https://johncraven.github.io/posts/linux-update/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been tinkering around with Linux Mint at home for a few weeks now and decided to write a quick update on how it has been going so far. I decided to update my home computer to dual boot into Linux Mint and Win11 after getting annoyed with the Microsoft pushing onedrive and the m365 accounts on bootup. I did still keep the windows partition active as a fallback, particularly for software compatiblity if I don&amp;rsquo;t want to fuss with wine.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,31 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Junk Drawer</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://johncraven.github.io/posts/</link>
     <description>Recent content in Posts on Junk Drawer</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Jun 2025 19:53:37 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Jun 2025 13:02:50 -0400</lastBuildDate>
+    <atom:link href="https://johncraven.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Todo Update: Field properties, Comments and Styling</title>
+      <link>https://johncraven.github.io/posts/todo-2/</link>
+      <pubDate>Sun, 22 Jun 2025 13:02:50 -0400</pubDate>
+      <guid>https://johncraven.github.io/posts/todo-2/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been playing around with extending the &lt;a href=&#34;https://johncraven.github.io/posts/todo-1/&#34;&gt;toy Django app&lt;/a&gt; I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.&lt;/p&gt;
+&lt;h2 id=&#34;current-state&#34;&gt;Current state&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;https://johncraven.github.io/posts/todo-2/site-example.gif#center&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;new-features&#34;&gt;New features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Added some basic CSS container and form styling with a little &lt;a href=&#34;https://hype4.academy/articles/design/neubrutalism-is-taking-over-web&#34;&gt;neubrutalism inspiration&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added more properties on the default todo items; due dates, descriptions, priority&lt;/li&gt;
+&lt;li&gt;The list view on the homepage includes the description and flags for overdue and high priority items&lt;/li&gt;
+&lt;li&gt;The detail page now has a basic comment section, making use of the &lt;code&gt;django.contrib.humanize&lt;/code&gt; package to format dates into relevant strings like &amp;ldquo;now&amp;rdquo; or &amp;ldquo;an hour ago&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;And of course, additions to the test suite for new functionality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;process&#34;&gt;Process&lt;/h2&gt;
+&lt;p&gt;This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I&amp;rsquo;m doing this to learn on my own I&amp;rsquo;m leaning more on the side of using the llm tools to guide me rather than edit code directly.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Simple Todo Site</title>
-      <link>http://localhost:1313/posts/todo-1/</link>
+      <link>https://johncraven.github.io/posts/todo-1/</link>
       <pubDate>Tue, 17 Jun 2025 19:53:37 -0400</pubDate>
-      <guid>http://localhost:1313/posts/todo-1/</guid>
+      <guid>https://johncraven.github.io/posts/todo-1/</guid>
       <description>&lt;p&gt;I have been working in an IT management role for a few years now, primarily focused on data engineering and integrations with analytical instrumentation. Unfortunately, I rarely get the chance to develop hands-on coding skills at work, so I thought it would be fun to take up some side projects and tinker around. To get started I made a simple to-do website with Django. The site is basic CRUD functionality just to help jog my memory on how everything fits together.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Linux Update 🐧</title>
-      <link>http://localhost:1313/posts/linux-update/</link>
+      <link>https://johncraven.github.io/posts/linux-update/</link>
       <pubDate>Mon, 09 Jun 2025 18:29:40 -0400</pubDate>
-      <guid>http://localhost:1313/posts/linux-update/</guid>
+      <guid>https://johncraven.github.io/posts/linux-update/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been tinkering around with Linux Mint at home for a few weeks now and decided to write a quick update on how it has been going so far. I decided to update my home computer to dual boot into Linux Mint and Win11 after getting annoyed with the Microsoft pushing onedrive and the m365 accounts on bootup. I did still keep the windows partition active as a fallback, particularly for software compatiblity if I don&amp;rsquo;t want to fuss with wine.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My current e-piano audio setup 🎹</title>
-      <link>http://localhost:1313/posts/audio-routing/</link>
+      <link>https://johncraven.github.io/posts/keyboard-audio/</link>
       <pubDate>Thu, 05 Jun 2025 17:29:59 -0400</pubDate>
-      <guid>http://localhost:1313/posts/audio-routing/</guid>
+      <guid>https://johncraven.github.io/posts/keyboard-audio/</guid>
       <description>&lt;h2 id=&#34;a-little-background&#34;&gt;A little background&lt;/h2&gt;
 &lt;p&gt;I bought a digital piano (Roland FP-30x) last year after wanting to get back into paino for a long time. I played a bit of piano when I was young and then played guitar on and off for a few years. I&amp;rsquo;m still playing at a beginner level but getting back into playing as a hobby has been fun. Most of the time I&amp;rsquo;m playing with sheet music or video lessons (I&amp;rsquo;ve been having a good time with &lt;a href=&#34;https://www.pianote.com/&#34;&gt;Pianote&lt;/a&gt;), but also wanted to dig into some more music production and playing with synths / VSTs.&lt;/p&gt;</description>
     </item>

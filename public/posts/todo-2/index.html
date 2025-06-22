@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Todo Update: Field properties, Comments and Styling | Junk Drawer</title>
+<meta name="keywords" content="django, web, django-todo">
+<meta name="description" content="I&rsquo;ve been playing around with extending the toy Django app I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.
+Current state
+
+New features
+
+Added some basic CSS container and form styling with a little neubrutalism inspiration.
+Added more properties on the default todo items; due dates, descriptions, priority
+The list view on the homepage includes the description and flags for overdue and high priority items
+The detail page now has a basic comment section, making use of the django.contrib.humanize package to format dates into relevant strings like &ldquo;now&rdquo; or &ldquo;an hour ago&rdquo;
+And of course, additions to the test suite for new functionality
+
+Process
+This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I&rsquo;m doing this to learn on my own I&rsquo;m leaning more on the side of using the llm tools to guide me rather than edit code directly.">
+<meta name="author" content="">
+<link rel="canonical" href="https://johncraven.github.io/posts/todo-2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://johncraven.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://johncraven.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://johncraven.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://johncraven.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://johncraven.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://johncraven.github.io/posts/todo-2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://johncraven.github.io/posts/todo-2/">
+  <meta property="og:site_name" content="Junk Drawer">
+  <meta property="og:title" content="Todo Update: Field properties, Comments and Styling">
+  <meta property="og:description" content="I’ve been playing around with extending the toy Django app I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.
+Current state New features Added some basic CSS container and form styling with a little neubrutalism inspiration. Added more properties on the default todo items; due dates, descriptions, priority The list view on the homepage includes the description and flags for overdue and high priority items The detail page now has a basic comment section, making use of the django.contrib.humanize package to format dates into relevant strings like “now” or “an hour ago” And of course, additions to the test suite for new functionality Process This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I’m doing this to learn on my own I’m leaning more on the side of using the llm tools to guide me rather than edit code directly.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-22T13:02:50-04:00">
+    <meta property="article:modified_time" content="2025-06-22T13:02:50-04:00">
+    <meta property="article:tag" content="Django">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Django-Todo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Todo Update: Field properties, Comments and Styling">
+<meta name="twitter:description" content="I&rsquo;ve been playing around with extending the toy Django app I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.
+Current state
+
+New features
+
+Added some basic CSS container and form styling with a little neubrutalism inspiration.
+Added more properties on the default todo items; due dates, descriptions, priority
+The list view on the homepage includes the description and flags for overdue and high priority items
+The detail page now has a basic comment section, making use of the django.contrib.humanize package to format dates into relevant strings like &ldquo;now&rdquo; or &ldquo;an hour ago&rdquo;
+And of course, additions to the test suite for new functionality
+
+Process
+This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I&rsquo;m doing this to learn on my own I&rsquo;m leaning more on the side of using the llm tools to guide me rather than edit code directly.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://johncraven.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Todo Update: Field properties, Comments and Styling",
+      "item": "https://johncraven.github.io/posts/todo-2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Todo Update: Field properties, Comments and Styling",
+  "name": "Todo Update: Field properties, Comments and Styling",
+  "description": "I\u0026rsquo;ve been playing around with extending the toy Django app I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.\nCurrent state New features Added some basic CSS container and form styling with a little neubrutalism inspiration. Added more properties on the default todo items; due dates, descriptions, priority The list view on the homepage includes the description and flags for overdue and high priority items The detail page now has a basic comment section, making use of the django.contrib.humanize package to format dates into relevant strings like \u0026ldquo;now\u0026rdquo; or \u0026ldquo;an hour ago\u0026rdquo; And of course, additions to the test suite for new functionality Process This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I\u0026rsquo;m doing this to learn on my own I\u0026rsquo;m leaning more on the side of using the llm tools to guide me rather than edit code directly.\n",
+  "keywords": [
+    "django", "web", "django-todo"
+  ],
+  "articleBody": "I’ve been playing around with extending the toy Django app I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.\nCurrent state New features Added some basic CSS container and form styling with a little neubrutalism inspiration. Added more properties on the default todo items; due dates, descriptions, priority The list view on the homepage includes the description and flags for overdue and high priority items The detail page now has a basic comment section, making use of the django.contrib.humanize package to format dates into relevant strings like “now” or “an hour ago” And of course, additions to the test suite for new functionality Process This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I’m doing this to learn on my own I’m leaning more on the side of using the llm tools to guide me rather than edit code directly.\nThis time I started by using anthropic’s Claude to discuss some basic goals and prioritize features. When I would get stuck I would try to do a bit of debugging with tools in my IDE or the browser devtools, then if I was stuck I would usually try explaining the general issue with the LLM to guide me. It has been interesting that even when the LLM suggestions are not accurate, I found that I enjoyed not needing to context switch through project documentation, stack overflow, or reddit comments. In particular the LLM chat seemed to go a great job in answering the “what are my options to accomplish X” or “I’m trying to do X but it isn’t working, am I going about this the right way”.\nA few things Claude helped me with…\nFinding some conflicting CSS properties after adding snippets from my CSS files in the chat context Setting up the django tests to work with VS Code’s native test runner Configuring template linting with djlint Tinkering with django’s generic class based view properties and refactoring some views into function based views Next up I’ll need to look at adding more JS on the site.\n",
+  "wordCount" : "380",
+  "inLanguage": "en",
+  "datePublished": "2025-06-22T13:02:50-04:00",
+  "dateModified": "2025-06-22T13:02:50-04:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://johncraven.github.io/posts/todo-2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Junk Drawer",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://johncraven.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://johncraven.github.io/" accesskey="h" title="Junk Drawer (Alt + H)">Junk Drawer</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://johncraven.github.io/" title="home">
+                    <span>home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://johncraven.github.io/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://johncraven.github.io/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://johncraven.github.io/archives/" title="archives">
+                    <span>archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://johncraven.github.io/search/" title="search (Alt &#43; /)" accesskey=/>
+                    <span>search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://johncraven.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://johncraven.github.io/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Todo Update: Field properties, Comments and Styling
+    </h1>
+    <div class="post-meta"><span title='2025-06-22 13:02:50 -0400 EDT'>June 22, 2025</span>&nbsp;|&nbsp;<a href="https://github.com/johncraven/johncraven.github.io/blob/main/content/posts/2025-06-22-todo-update/index.md" rel="noopener noreferrer edit" target="_blank">Suggest changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#current-state" aria-label="Current state">Current state</a></li>
+                <li>
+                    <a href="#new-features" aria-label="New features">New features</a></li>
+                <li>
+                    <a href="#process" aria-label="Process">Process</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>I&rsquo;ve been playing around with extending the <a href="https://johncraven.github.io/posts/todo-1/">toy Django app</a> I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.</p>
+<h2 id="current-state">Current state<a hidden class="anchor" aria-hidden="true" href="#current-state">#</a></h2>
+<p><img alt="image" loading="lazy" src="/posts/todo-2/site-example.gif#center"></p>
+<h2 id="new-features">New features<a hidden class="anchor" aria-hidden="true" href="#new-features">#</a></h2>
+<ul>
+<li>Added some basic CSS container and form styling with a little <a href="https://hype4.academy/articles/design/neubrutalism-is-taking-over-web">neubrutalism inspiration</a>.</li>
+<li>Added more properties on the default todo items; due dates, descriptions, priority</li>
+<li>The list view on the homepage includes the description and flags for overdue and high priority items</li>
+<li>The detail page now has a basic comment section, making use of the <code>django.contrib.humanize</code> package to format dates into relevant strings like &ldquo;now&rdquo; or &ldquo;an hour ago&rdquo;</li>
+<li>And of course, additions to the test suite for new functionality</li>
+</ul>
+<h2 id="process">Process<a hidden class="anchor" aria-hidden="true" href="#process">#</a></h2>
+<p>This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I&rsquo;m doing this to learn on my own I&rsquo;m leaning more on the side of using the llm tools to guide me rather than edit code directly.</p>
+<p>This time I started by using anthropic&rsquo;s Claude to discuss some basic goals and prioritize features. When I would get stuck I would try to do a bit of debugging with tools in my IDE or the browser devtools, then if I was stuck I would usually try explaining the general issue with the LLM to guide me. It has been interesting that even when the LLM suggestions are not accurate, I found that I enjoyed not needing to context switch through project documentation, stack overflow, or reddit comments. In particular the LLM chat seemed to go a great job in answering the &ldquo;what are my options to accomplish X&rdquo; or &ldquo;I&rsquo;m trying to do X but it isn&rsquo;t working, am I going about this the right way&rdquo;.</p>
+<p>A few things Claude helped me with&hellip;</p>
+<ul>
+<li>Finding some conflicting CSS properties after adding snippets from my CSS files in the chat context</li>
+<li>Setting up the django tests to work with VS Code&rsquo;s native test runner</li>
+<li>Configuring template linting with djlint</li>
+<li>Tinkering with django&rsquo;s generic class based view properties and refactoring some views into function based views</li>
+</ul>
+<p>Next up I&rsquo;ll need to look at adding more JS on the site.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://johncraven.github.io/tags/django/">Django</a></li>
+      <li><a href="https://johncraven.github.io/tags/web/">Web</a></li>
+      <li><a href="https://johncraven.github.io/tags/django-todo/">Django-Todo</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://johncraven.github.io/">Junk Drawer</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

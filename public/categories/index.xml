@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Junk Drawer</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://johncraven.github.io/categories/</link>
     <description>Recent content in Categories on Junk Drawer</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Jun 2025 19:53:37 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Jun 2025 13:02:50 -0400</lastBuildDate>
+    <atom:link href="https://johncraven.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tech</title>
-      <link>http://localhost:1313/categories/tech/</link>
-      <pubDate>Tue, 17 Jun 2025 19:53:37 -0400</pubDate>
-      <guid>http://localhost:1313/categories/tech/</guid>
+      <link>https://johncraven.github.io/categories/tech/</link>
+      <pubDate>Sun, 22 Jun 2025 13:02:50 -0400</pubDate>
+      <guid>https://johncraven.github.io/categories/tech/</guid>
       <description></description>
     </item>
     <item>
       <title>Music</title>
-      <link>http://localhost:1313/categories/music/</link>
+      <link>https://johncraven.github.io/categories/music/</link>
       <pubDate>Thu, 05 Jun 2025 17:29:59 -0400</pubDate>
-      <guid>http://localhost:1313/categories/music/</guid>
+      <guid>https://johncraven.github.io/categories/music/</guid>
       <description></description>
     </item>
   </channel>

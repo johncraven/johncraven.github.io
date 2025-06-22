@@ -1,5 +1,6 @@
 ---
 title: "Linux Update 🐧"
+slug: "linux-update"
 date: 2025-06-09T18:29:40-04:00
 draft: false
 author: John Craven
