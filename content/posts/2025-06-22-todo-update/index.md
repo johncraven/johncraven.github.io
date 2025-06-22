@@ -19,7 +19,7 @@ I've been playing around with extending the [toy Django app]({{<ref "/posts/2025
 
 ## New features
 
-* Added some basic CSS container and form styling with a little [neubrutalism inspiration](https://hype4.academy/articles/design/neubrutalism-is-taking-over-web).
+* Added some basic CSS container and form styling with a little neubrutalism inspiration.
 * Added more properties on the default todo items; due dates, descriptions, priority
 * The list view on the homepage includes the description and flags for overdue and high priority items
 * The detail page now has a basic comment section, making use of the `django.contrib.humanize` package to format dates into relevant strings like "now" or "an hour ago"
