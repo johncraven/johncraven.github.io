@@ -11,7 +11,7 @@ tags:
 - django-todo
 ---
 
-I've been playing around with extending the [toy Django app]({{<ref "/posts/2025-06-17-todo-site.md" >}}) I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now. 
+I've been playing around with extending the [toy Django app]({{<ref "/posts/2025-06-17-todo-site.md" >}}) I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.
 
 ## Current state
 
