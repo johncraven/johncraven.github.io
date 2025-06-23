@@ -35,15 +35,15 @@ menu:
       name: archives
       url: /archives/
       weight: 40
-    - identifier: search
-      name: search
-      url: /search/
-      weight: 50
+    # - identifier: search
+    #   name: search
+    #   url: /search/
+    #   weight: 50
 
 params:
-  homeInfoParams:
-    Title: Hi there 👋
-    Content: excuse the mess
+  # homeInfoParams:
+  #   Title: Hi there 👋
+  #   Content: excuse the mess
 
   socialIcons: # optional
     - name: "github"

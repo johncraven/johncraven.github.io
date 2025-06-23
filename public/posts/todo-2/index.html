@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Todo Update: Field properties, Comments and Styling | Junk Drawer</title>
-<meta name="keywords" content="django, web, django-todo">
+<meta name="keywords" content="django, web, django-todo, python">
 <meta name="description" content="I&rsquo;ve been playing around with extending the toy Django app I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.
 Current state
 
@@ -20,7 +20,7 @@ And of course, additions to the test suite for new functionality
 
 Process
 This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I&rsquo;m doing this to learn on my own I&rsquo;m leaning more on the side of using the llm tools to guide me rather than edit code directly.">
-<meta name="author" content="">
+<meta name="author" content="John Craven">
 <link rel="canonical" href="https://johncraven.github.io/posts/todo-2/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://johncraven.github.io/favicon.ico">
@@ -80,6 +80,7 @@ Current state New features Added some basic CSS container and form styling with 
     <meta property="article:tag" content="Django">
     <meta property="article:tag" content="Web">
     <meta property="article:tag" content="Django-Todo">
+    <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Todo Update: Field properties, Comments and Styling">
 <meta name="twitter:description" content="I&rsquo;ve been playing around with extending the toy Django app I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.
@@ -125,13 +126,17 @@ This time around I am trying to take a more project-oriented approach to learnin
   "name": "Todo Update: Field properties, Comments and Styling",
   "description": "I\u0026rsquo;ve been playing around with extending the toy Django app I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.\nCurrent state New features Added some basic CSS container and form styling with a little neubrutalism inspiration. Added more properties on the default todo items; due dates, descriptions, priority The list view on the homepage includes the description and flags for overdue and high priority items The detail page now has a basic comment section, making use of the django.contrib.humanize package to format dates into relevant strings like \u0026ldquo;now\u0026rdquo; or \u0026ldquo;an hour ago\u0026rdquo; And of course, additions to the test suite for new functionality Process This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I\u0026rsquo;m doing this to learn on my own I\u0026rsquo;m leaning more on the side of using the llm tools to guide me rather than edit code directly.\n",
   "keywords": [
-    "django", "web", "django-todo"
+    "django", "web", "django-todo", "python"
   ],
   "articleBody": "I’ve been playing around with extending the toy Django app I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.\nCurrent state New features Added some basic CSS container and form styling with a little neubrutalism inspiration. Added more properties on the default todo items; due dates, descriptions, priority The list view on the homepage includes the description and flags for overdue and high priority items The detail page now has a basic comment section, making use of the django.contrib.humanize package to format dates into relevant strings like “now” or “an hour ago” And of course, additions to the test suite for new functionality Process This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I’m doing this to learn on my own I’m leaning more on the side of using the llm tools to guide me rather than edit code directly.\nThis time I started by using anthropic’s Claude to discuss some basic goals and prioritize features. When I would get stuck I would try to do a bit of debugging with tools in my IDE or the browser devtools, then if I was stuck I would usually try explaining the general issue with the LLM to guide me. It has been interesting that even when the LLM suggestions are not accurate, I found that I enjoyed not needing to context switch through project documentation, stack overflow, or reddit comments. In particular the LLM chat seemed to go a great job in answering the “what are my options to accomplish X” or “I’m trying to do X but it isn’t working, am I going about this the right way”.\nA few things Claude helped me with…\nFinding some conflicting CSS properties after adding snippets from my CSS files in the chat context Setting up the django tests to work with VS Code’s native test runner Configuring template linting with djlint Tinkering with django’s generic class based view properties and refactoring some views into function based views Next up I’ll need to look at adding more JS on the site.\n",
   "wordCount" : "380",
   "inLanguage": "en",
   "datePublished": "2025-06-22T13:02:50-04:00",
   "dateModified": "2025-06-22T13:02:50-04:00",
+  "author":{
+    "@type": "Person",
+    "name": "John Craven"
+  },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://johncraven.github.io/posts/todo-2/"
@@ -208,11 +213,6 @@ This time around I am trying to take a more project-oriented approach to learnin
                     <span>archives</span>
                 </a>
             </li>
-            <li>
-                <a href="https://johncraven.github.io/search/" title="search (Alt &#43; /)" accesskey=/>
-                    <span>search</span>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
@@ -224,7 +224,7 @@ This time around I am trying to take a more project-oriented approach to learnin
     <h1 class="post-title entry-hint-parent">
       Todo Update: Field properties, Comments and Styling
     </h1>
-    <div class="post-meta"><span title='2025-06-22 13:02:50 -0400 EDT'>June 22, 2025</span>&nbsp;|&nbsp;<a href="https://github.com/johncraven/johncraven.github.io/blob/main/content/posts/2025-06-22-todo-update/index.md" rel="noopener noreferrer edit" target="_blank">Suggest changes</a>
+    <div class="post-meta"><span title='2025-06-22 13:02:50 -0400 EDT'>June 22, 2025</span>&nbsp;·&nbsp;John Craven&nbsp;|&nbsp;<a href="https://github.com/johncraven/johncraven.github.io/blob/main/content/posts/2025-06-22-todo-update/index.md" rel="noopener noreferrer edit" target="_blank">Suggest changes</a>
 
 </div>
   </header> <div class="toc">
@@ -277,6 +277,7 @@ This time around I am trying to take a more project-oriented approach to learnin
       <li><a href="https://johncraven.github.io/tags/django/">Django</a></li>
       <li><a href="https://johncraven.github.io/tags/web/">Web</a></li>
       <li><a href="https://johncraven.github.io/tags/django-todo/">Django-Todo</a></li>
+      <li><a href="https://johncraven.github.io/tags/python/">Python</a></li>
     </ul>
   </footer>
 </article>
@@ -351,6 +352,11 @@ This time around I am trying to take a more project-oriented approach to learnin
     })
 
 </script>
-</body>
 
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+
+</body>
 </html>

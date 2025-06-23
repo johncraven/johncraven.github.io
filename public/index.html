@@ -142,45 +142,23 @@
                     <span>archives</span>
                 </a>
             </li>
-            <li>
-                <a href="https://johncraven.github.io/search/" title="search (Alt &#43; /)" accesskey=/>
-                    <span>search</span>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
 <main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>Hi there 👋</h1>
-    </header>
-    <div class="entry-content">
-        excuse the mess
-    </div>
-    <footer class="entry-footer">
-        <div class="social-icons" >
-    <a href="https://github.com/johncraven" target="_blank" rel="noopener noreferrer me"
-        title="Github">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-    </path>
-</svg>
-    </a>
-    <a href="https://www.linkedin.com/in/johndcraven/" target="_blank" rel="noopener noreferrer me"
-        title="Linkedin">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-    <rect x="2" y="9" width="4" height="12"></rect>
-    <circle cx="4" cy="4" r="2"></circle>
-</svg>
-    </a>
-</div>
 
-    </footer>
+<article class="first-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Todo Update: First Steps in AJAX world
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Continuing this todo project, I thought it would be a good time to dip into a little JS. So far the site was built entirely with Django server rendered templates. To get started with some progressive enhancements I picked out a few changes I could make on the frontend with JS without needing to update the Django views or create API endpoints yet.
+Final product Here’s a gif after the changes. You’ll notice that delete buttons now open a modal in a few cases. What might be trickier to see in the gif is that deleting items from a list now happens without a full page refresh.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-06-22 23:18:02 -0400 EDT'>June 22, 2025</span>&nbsp;·&nbsp;John Craven</footer>
+  <a class="entry-link" aria-label="post link to Todo Update: First Steps in AJAX world" href="https://johncraven.github.io/posts/todo-3/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -193,7 +171,7 @@
 Current state New features Added some basic CSS container and form styling with a little neubrutalism inspiration. Added more properties on the default todo items; due dates, descriptions, priority The list view on the homepage includes the description and flags for overdue and high priority items The detail page now has a basic comment section, making use of the django.contrib.humanize package to format dates into relevant strings like “now” or “an hour ago” And of course, additions to the test suite for new functionality Process This time around I am trying to take a more project-oriented approach to learning, and integrating more LLM tools into my workflow. Since I’m doing this to learn on my own I’m leaning more on the side of using the llm tools to guide me rather than edit code directly.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-06-22 13:02:50 -0400 EDT'>June 22, 2025</span></footer>
+  <footer class="entry-footer"><span title='2025-06-22 13:02:50 -0400 EDT'>June 22, 2025</span>&nbsp;·&nbsp;John Craven</footer>
   <a class="entry-link" aria-label="post link to Todo Update: Field properties, Comments and Styling" href="https://johncraven.github.io/posts/todo-2/"></a>
 </article>
 
@@ -206,7 +184,7 @@ Current state New features Added some basic CSS container and form styling with 
     <p>I have been working in an IT management role for a few years now, primarily focused on data engineering and integrations with analytical instrumentation. Unfortunately, I rarely get the chance to develop hands-on coding skills at work, so I thought it would be fun to take up some side projects and tinker around. To get started I made a simple to-do website with Django. The site is basic CRUD functionality just to help jog my memory on how everything fits together.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-06-17 19:53:37 -0400 EDT'>June 17, 2025</span></footer>
+  <footer class="entry-footer"><span title='2025-06-17 19:53:37 -0400 EDT'>June 17, 2025</span>&nbsp;·&nbsp;John Craven</footer>
   <a class="entry-link" aria-label="post link to Simple Todo Site" href="https://johncraven.github.io/posts/todo-1/"></a>
 </article>
 
@@ -306,6 +284,11 @@ Current state New features Added some basic CSS container and form styling with 
     })
 
 </script>
-</body>
 
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+
+</body>
 </html>

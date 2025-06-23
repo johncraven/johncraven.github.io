@@ -1,5 +1,6 @@
 ---
 title: "Simple Todo Site"
+author: John Craven
 slug: "todo-1"
 date: 2025-06-17T19:53:37-04:00
 draft: false
@@ -9,6 +10,7 @@ tags:
 - django
 - web
 - django-todo
+- python
 ---
 
 I have been working in an IT management role for a few years now, primarily focused on data engineering and integrations with analytical instrumentation. Unfortunately, I rarely get the chance to develop hands-on coding skills at work, so I thought it would be fun to take up some side projects and tinker around. To get started I made a simple to-do website with Django. The site is basic CRUD functionality just to help jog my memory on how everything fits together.

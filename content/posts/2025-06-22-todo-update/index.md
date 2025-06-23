@@ -1,5 +1,6 @@
 ---
 title: "Todo Update: Field properties, Comments and Styling"
+author: John Craven
 slug: "todo-2"
 date: 2025-06-22T13:02:50-04:00
 draft: false
@@ -9,6 +10,7 @@ tags:
 - django
 - web
 - django-todo
+- python
 ---
 
 I've been playing around with extending the [toy Django app]({{<ref "/posts/2025-06-17-todo-site.md" >}}) I was working on. I wanted to focus on getting more backend experience with Django while also getting more understanding for web dev basics for HTML/CSS/JS, so I restricted myself to Django and vanilla CSS/JS for now.

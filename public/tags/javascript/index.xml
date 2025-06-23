@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Javascript on Junk Drawer</title>
+    <link>https://johncraven.github.io/tags/javascript/</link>
+    <description>Recent content in Javascript on Junk Drawer</description>
+    <generator>Hugo -- 0.147.7</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Jun 2025 23:18:02 -0400</lastBuildDate>
+    <atom:link href="https://johncraven.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Todo Update: First Steps in AJAX world</title>
+      <link>https://johncraven.github.io/posts/todo-3/</link>
+      <pubDate>Sun, 22 Jun 2025 23:18:02 -0400</pubDate>
+      <guid>https://johncraven.github.io/posts/todo-3/</guid>
+      <description>&lt;p&gt;Continuing &lt;a href=&#34;https://johncraven.github.io/posts/todo-2/&#34;&gt;this todo project&lt;/a&gt;, I thought it would be a good time to dip into a little JS. So far the site was built entirely with Django server rendered templates. To get started with some progressive enhancements I picked out a few changes I could make on the frontend with JS without needing to update the Django views or create API endpoints yet.&lt;/p&gt;
+&lt;h2 id=&#34;final-product&#34;&gt;Final product&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a gif after the changes. You&amp;rsquo;ll notice that delete buttons now open a modal in a few cases. What might be trickier to see in the gif is that deleting items from a list now happens without a full page refresh.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
